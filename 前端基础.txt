@@ -1,0 +1,2544 @@
+javascript
+
+注释
+单行//
+多行/**/
+块级/** */
+
+netscape-->navigator
+宿主：浏览器
+livescript-->javascript
+
+internet explorer
+jscript-->vbscript
+
+
+2005
+XMLHttpRequest-->后台
+ajax
+
+google --》gmail,google map
+
+nodeJS
+
+andriod->java
+ios:obejct-c;
+
+js+php
+
+jsp aspx php
+
+
+javascrpt
+弱类型的脚本语言
+
+变量
+声明变量
+var 显式声明，如果没有var的话
+
+，是全局变量。
+变量只能保存最新的值。
+variable:变量。
+const：constant常量。
+字符串
+引号成对出现
+不能嵌套自身
+“<img src='"+num+".jpg'>”
+'<img src="'++'.jpg">'
+字符串
+charAt();
+indexOf()
+lastIndex()
+concat()
+slice();
+substring();
+
+var num=6
+num=35;
+num="tom"
+数组可以保存多个值
+创建数组,最后一个元素的后面，
+
+不能加逗号。
+读取数组的元素member[index]
+var member=[];空数组
+new Array(5):数组的长度是5；
+new Array()
+
+数组的方法
+push()
+pop();
+unshift()
+shift();
+
+流程控制
+1.条件
+if(expr){//code}
+if(expr)else{//code}
+if(expr){//code}else if(){}
+switch(value){
+        case :
+        ///code
+        break;
+}
+三元条件
+结构
+表达式？结果1：结果2；
+如果表达式为真，就执行结果1，
+如果为假，就执行结果2。
+
+2.循环
+2.1.for(expre1;expre2;expre3)
+for(var i=0;i<5;i++){
+        console.log(i);
+}
+
+i++  i=i+1；
+i+=2;i=i+2;
+2.2.for...in,只针对数组和对象
+for(i in member){}
+i就是member的索引值
+2.3.for...of
+for(i of member){}
+i指代的是数组的元素。
+2.4.forEach(function
+
+(value,index){})循环
+通过回调函数传递数组元素，
+索引值，数组本身。
+member.forEach(function(value
+
+，index，arr){
+});
+2.5.while循环
+while(expre){//code}
+
+2.6.do{//code}while(expre)
+就算表达式为假，循环也会执行
+一次。
+
+3.跳出break,continue
+跳出正常的代码执行逻辑
+break：终止代码执行。
+continue:忽略这次循环，继续执行。
+
+内置对象
+时间对象，处理的本地时间。
+Date是js中原生的时间对象，需要实例化才可以使用。
+1.new Date();获取输出本地时间的对象
+2.new Date(2018,09,12);指定的时间对象
+时间对象的方法
+getFullYear();年份
+getMonth()+1:月份 0~1
+getDate();日
+getHours():时
+getMinutes()：分
+getSeconds()：秒
+getDay()星期0~6
+getTime();时间戳timestamp,单位是毫秒，int类型；
+
+元素.innerHTML；既可以为元素赋值，也可以取值，支持html。
+
+setInterval(code,时间);设置时间间隔
+在每隔设定的时间就执行一次code
+
+0517作业
+1.基础知识，不会的mark
+2.图片时间静止
+3.图片时间动态
+
+数学对象
+属性
+console.log(Math.PI);圆周率
+方法
+console.log(Math);
+console.log(Math.min(5,14));小值
+console.log(Math.max(5,14));大值
+console.log(Math.pow(2,4));幂
+console.log(Math.floor(2.9));最近的小值
+console.log(Math.ceil(2.9));最近的大值
+console.log(Math.random());随机数0~1
+console.log(Math.round());四舍五入
+
+字符串对象
+创建字符串对象
+new String();
+属性
+length字符串的长度
+字符串可以根据索引值获取字符
+str[index]
+方法
+substring(start,end);截取字符串
+start:开始截取的索引值
+end：结束截取的索引值，结果不包含end。
+slice(start,end)
+截取字符串，支持负值。
+split(分隔符)根据分隔符把字符串转换为数组
+如果符串中没有分隔符的话，整个符串作为数组的一个元素。
+如果分隔符为空，字符串中的所有字符都是数组中个一个元素。
+
+学习技能
+https://develo per.mozilla.org/zh-CN/
+http://stackoverflow.com/
+
+数据类型
+转换：自动转换和函数转换
+转换为数字
+Number():"55"
+Boolean()
+parseInt():"55ab"
+parseFloat():"5.5abc.com"==>5.5
+
+函数，function函数，argument参数
+封装可复用的代码
+结构
+function 函数名(参数列表){
+    //函数体，封装的可复用的代码
+}
+参数列表：参数可以为空，参数有顺序要求。
+函数需要触发
+直接调用函数名
+通过元素的事件属性调用
+<button onclick="Msg();">按钮</button>
+事件
+元素.addEventListener()
+函数的返回值
+return是关键字，return之后的内容不执行
+字符串
+return “tom"
+数字
+布尔型
+数组
+return [
+        "张三",
+        "李四"
+        ];
+对象
+ return {
+                "username":"tom",
+                "gender":"male",
+                'level':"vip"
+        }
+ 函数  
+   return function(){
+                alert(555);
+       }
+ 函数的参数
+ function Msg(username){
+        return username;
+}
+username:形式参数，形参。
+Msg("aaaa");实际参数，实参。
+匿名函数
+ function(){}
+匿名函数的调用
+赋给变量
+var Msg=function(){
+                alert(333);
+        }
+(匿名函数)()匿名函数的自触发
+匿名函数的传值
+1.(function(username){
+                alert(username);
+        })("tom");
+ 2.var Msg=function(username){
+                alert(username);
+        }
+        Msg("peter");
+  箭头函数
+  var Msg=value=>value;
+  function Msg(value){
+      return value;
+  }
+  Function构造方法创建函数
+  var Msg=new Function("return 'tom'");
+  var Msg=new Function("username","return username");
+  arguments
+ 数组类型，包含的是实参。
+ function Msg(username,level){
+        console.log(arguments);
+}
+Msg("mike","vip");
+  
+  对象
+  {key:value,key:value,key:value}
+  
+  
+ 元素居中
+  1..demo{
+                width:300px;
+                height:100px;
+                border:1px solid red;
+                position:absolute;
+                left:50%;
+                top:50%;
+                margin-left:-150px;
+                margin-top:-50px;
+        }
+ 2..demo{
+                width:300px;
+                height:100px;
+                border:1px solid red;
+                position:absolute;
+                left:0;
+                right:0;
+                top:0;
+                bottom:0;
+                margin:auto;
+        }
+      3.js 
+      （窗口的尺寸-元素的尺寸）/2+滚动条的值
+0518作业
+1.预习DOM文档对象模型
+2.不同时段的欢迎语句
+3.封装根据类名称获取元素
+
+DOM文档对象模型
+dom：document object modal
+把文档看成一个对象，根据文档的层级操作文档。
+DOM Tree
+文档树由节点组成，节点是文档的最基本单位。
+节点：node
+节点的类型 nodeType
+元素节点    1
+属性节点    2
+文本节点    3
+cdata节点  
+实体引用节点
+实体节点
+处理指令节点
+注释节点
+文档节点
+文档类型节点
+部分文档节点
+DTD声明符号节点
+
+节点的属性
+nodeType：节点类型
+nodeValue：节点值
+nodeName：节点名称
+firstChild：第一个子节点
+lastChild:最后一个子节点
+childNodes:子节点数组
+parentNode：父节点
+previousElementSibling：同级元素紧邻前面一个
+nextElementSibling：同级元素紧邻后面一个
+
+
+节点的的方法
+appendChild():追加子节点
+createTextNode();创建文本节点
+removeChild();移除子元素
+
+node中如何清除空格
+
+元素
+element
+选择元素
+getElementById(id名称)，根据id名称选择元素，返回值是获取到的这个元素，如果获取不到，返回null。
+getElementsByTagName(),根据标签名选择元素，返回值是包含选择元素的数组，如果获取不到，返回空数组。
+getElementsByClassName();根据类名称选择元素，返回值是包含选择元素的数组，如果获取不到，返回空数组。
+getElementsByName();根据name选择元素，返回值是包含选择元素的数组，如果获取不到，返回空数组。
+querySelector();根据选择器获取元素，返回值是符合要求第一个元素，如果没有结果，返回null。
+querySelectorAll()；根据选择器获取元素，返回值是符合要求所有元素，如果没有结果，返回空数组。
+属性
+属性在元素的开标签中，属性名之间，属性名与标签名之间至少有一个空格。
+合法和自定义属性。
+属性值既可以获取，也可以赋值。
+合法属性
+class要变为className才可以处理元素的class属性。
+sytle样式属性
+如果样式是有多个单词组成，单词链接在一起，除了第一个单词外，后面单词的首字母大写。
+demo.style.fontSize
+自定义属性
+
+方法
+appendChild():追加子节点
+
+匿名类，伪类
+hover,link,visited,active,after,before,target,focus,blur,checked,dropback,fullscreen,
+
+
+0519作业
+换皮肤
+预习事件
+
+
+
+link标签，链接外部的文件。
+rel：relationship关系。stylesheet样式表，shortcut：快捷图标
+<link rel="stylesheet" type="text/css" href="a.css">
+<link rel="shortcut" href="a.ico">
+
+setInterval(code,delay);
+设置时间间隔，每隔delay的时间，就执行一次code。
+code：两种类型，string，function。
+delay：间隔时间，单位是毫秒。
+
+
+元素的属性
+既可以取值，也可以赋值。
+合法
+className,id,size,width,height,title,href,color,bgcolor,style,checked,selected,name,type,
+for,placeholder,value,
+
+value表单元素的值属性
+input元素中的value是收集的用户的数据。
+
+innerHTML普通元素的值
+
+clientWidth:元素的宽，数字类型， 包含内容和padding。
+clientHeight:元素的高，数字类型， 包含内容和padding。
+offsetWidth:包含边框，内容，内边距，滚动条。
+offsetHeight:包含边框，内容，内边距，滚动条。
+innerWidth:
+innerHeight:
+
+scrollWidth:滚动条的宽
+scrollHeight:滚动条高
+
+scrollLeft:水平滚动条滚动的值
+scrollTop:垂直滚动条条滚动的距离
+
+窗口的宽度
+window.innerWidth：Chrome,ie不起作用。
+document.documentElement.clientWidth：ie，chrome不起作用。
+
+文档对象
+document
+HTML对象
+document.documentElement
+
+netscape网景---》AOL--》Mozilla--》firefox 20%
+navigator浏览器
+
+chrome 
+
+ie6-->ie7--->ie8->ie9-11  edge
+
+自定义属性
+1.setAttribute(key,value)设置属性值，合法和自定义都可以
+  getAttribute(key)获取属性值，合法和自定义都可以。
+2.dataset统一处理自定义属性
+自定义属性名以data-开头，在js中用dataset获取。
+<h1 class="demo" data-url="http://www.qq.com" data-info="hello">hello</h1>
+<script type="text/javascript">
+        var demo=document.querySelector(".demo");
+        console.log(demo.dataset.url);
+        console.log(demo.dataset.info);
+</script>
+
+0522作业
+登录界面 html，css，js
+复习居中函数
+
+属性
+setAttribute(key,value),设置属性
+getAttribute（key）,获取属性
+removeAttribute()，移除属性
+可以处理合法和自定义属性。
+合法
+元素.属性名
+自定义属性
+setAttribute(),getAttribute（）
+data-*在元素中命名，在js中处理元素.dataset.自定义属性名
+
+innerHTML：普通元素的值
+value：表单元素的值
+
+页面内的导航
+http://www.163.com:8080/reg/index.php#top?a=action&page=5
+协议：//host:port/path/index.php#section?searchQuery(查询字符串)
+1.a name="top"
+2.元素  id="top" target目标选择器
+#top:target{
+         color:red;
+         font-size:100px;
+ }
+ 3.js
+ btn.addEventListener("click",function(){
+       document.documentElement.scrollTop=0;
+       document.body.scrollTop=0;
+});
+
+事件
+Event页面上的行为就是事件。
+
+元素绑定事件
+1.元素.on事件名称=匿名函数
+img.onclick=function(){
+       //console.log(this);
+       this.style.display="none";
+}
+//////////////
+img.onclick=disappear;
+function disappear(){
+        this.style.display="none";
+}
+2.元素.addEventListener();调用元素的添加事件侦听器方法，调用绑定事件的方法。
+特点：一个元素可以绑定多个事件，一个事件可以多次使用。
+元素.addEventListener(type,listener);
+type:事件类型
+listener：事件侦听器，也就是事件的内容。
+html.addEventListener("click",function(){});
+//////////////////////////////
+html.addEventListener("click",msg);
+ function msg(){
+                console.log("hello");
+}
+0523作业
+点击按钮图片显示，再点击按钮，图片显示。（多个版本）
+
+显示隐藏
+1.btn.addEventListener("click",function(){
+                if(img.style.display=="none"){
+                        img.style.display="block";
+                }else{
+                        img.style.display="none";
+                }
+});
+2.三元
+img.style.display=(img.style.display=="none")?"block":"none";
+3.布尔型变量的切换
+var b=true;
+        btn.addEventListener("click",function(){
+                if(b){
+                        b=false;
+                        img.style.display="none";
+                }else{
+                        b=true;
+                        img.style.display="block";
+                }
+                console.log(b);
+        });
+4.switch
+switch(img.style.display){
+                        case "":
+                                img.style.display="none";
+                                break;
+                        case "none":
+                                img.style.display="";
+                                break;
+}
+
+Tab页效果
+1.forEach
+lis.forEach(function(value,index){
+                value.addEventListener("click",function(){
+                        //第一个步清空所有元素的active
+                        lis.forEach(function(v,i){
+                                v.className="";
+                                divs[i].className="";
+                        });
+                        //console.log(index);
+                        //为当前的元素添加active;
+                        value.className="active";
+                        divs[index].className="spotlight";
+                });
+        });
+2.setAttribute,getAttribute()
+for(var i=0;i<lis.length;i++){
+                //循环为每个一个list添加index
+                lis[i].setAttribute("index",i);
+                lis[i].addEventListener("click",function(){
+                        for(var j=0;j<lis.length;j++){
+                                lis[j].className="";
+                                divs[j].className="";
+                        }
+                        //console.log(this.title);
+                        divs[this.getAttribute("index")].className="spotlight";
+                        this.className="active";
+                });
+        }
+  3.匿名函数的自触发
+  for(var i=0;i<lis.length;i++){
+                //循环为每个一个list添加index
+                //匿名函数的自触发  (形参)(实参)
+                        (function(index){
+                                lis[index].addEventListener("click",function(){
+                                        for(var j=0;j<lis.length;j++){
+                                                lis[j].className="";
+                                                divs[j].className="";
+                                        }
+                                        //console.log(this.title);
+                                        divs[index].className="spotlight";
+                                        this.className="active";
+                                });
+                        })(i);
+        }
+  
+ 单击事件
+  tab页
+  全选
+  
+  双击事件
+  dblclick
+     
+ 鼠标事件   
+  
+  
+ 0524作业
+Tab页 鼠标事件    
+ 动画效果的导航 
+  
+       
+PK 
+居中
+Tab页
+
+
+鼠标事件
+mouseover
+mouseout
+
+change事件
+每次选择的值有不同时才会触发。
+一般用在select或者input type=“file"上
+
+焦点事件
+focus:获取焦点
+blur:失去焦点
+
+按键事件
+keyup：松开按键
+keydown：按下按键
+
+copy和paste
+copy：复制
+paste：粘贴
+cut：剪切
+var demo=document.querySelector(".demo");
+        demo.addEventListener("copy",function(){
+                alert("copy");
+        });
+        demo.addEventListener("paste",function(){
+                alert("paste");
+        });
+        demo.addEventListener("cut",function(){
+                alert("cut");
+        });
+事件对象
+事件触发时，事件对象产生，事件结束时，事件对象消失。
+开发者使用事件对象的属性和方法进行操作。
+
+创建事件对象
+事件侦听器中的形参：chrome，firefox，
+在IE中，事件对象是window对象的子对象 var evt=window.Event;
+
+方法
+stopPropagation()：阻止事件传递（ie下有差异）
+preventDefault();阻止默认动作（ie下有差异）
+
+属性
+keyCode:键值
+
+前端动画
+svg，canvas+js，css，js，jquery
+flash，Actionscript
+
+o'rellily 禽兽
+apress    衣冠
+
+加载事件
+1.load
+window.addEventListener("load",fn)，页面元素都加载完成。
+2.DOMContentLoaded
+DOMContentLoaded:DOM内容加载完成。<img src="1.jpg">
+load：所有元素。<img src="1.jpg"> 
+3.script标签的defer属性
+卸载事件
+window.addEventListener("unload",fn)
+
+同步
+按顺序执行
+
+异步
+异步代码不在顺序执行的序列中。
+
+BOM
+window对象是最上层对象，下面有
+documet，frames，history，location，navigator，screen对象
+
+
+window
+属性
+name：窗口名称
+方法
+1.open（url，name,features）:打开新窗口。
+url:要打开的文件的路径。
+name：打开窗口的名称。
+features：特性字符串，打开窗口的坐标，样式等。
+浏览器默认拦截
+close()关闭浏览器
+2.window.setInterval(code,delay)时间间隔
+3.window.setTimeout(code,delay)：delay结束时，code执行一次。
+setInterval和setTimeout返回值是定时器的id
+clearTimeout,clearInterval
+4.moveTo:浏览器移动到
+5.moveBy：浏览器移动多少
+6.resizeTo：大小改变到
+7.resizeBy：大小改变了多少
+8.alert:数据信息不如console.log详细，需要用户干预才能向下走。
+9.confirm(提示信息):确认框，返回true或者false
+10.prompt(提示信息，初始值)：输入框，初始值可以为空。
+事件
+load,unload,resize调整大小,scroll,
+
+document对象
+子对象
+images,links,anchors
+对象的层级
+window.document.images[1].style
+
+location对象
+地址栏对象
+属性
+location.href;URL
+location.port;端口
+location.pathname;网站路径
+location.host;主机名
+location.protocol:协议file,
+location.search:查询字符串?a=show&page=1
+方法
+reload(）重新加载
+
+history历史记录对象
+方法
+history.back()后退一个历史记录
+history.forward()前进一个历史记录
+history.go(n):n为负数是后退，n为正数，是前进。
+
+screen屏幕对象
+width:宽度
+availWidth：可用宽度
+height:高度
+availHeight：可用高度
+
+navigator 浏览器对象
+appVersion版本
+
+正则表达式
+regular expression
+创建正则对象
+1.new RegExp(模式,模式修饰符);
+var pattern=new RegExp("sh",'i')
+2.对象字面量的形式创建对象   
+pattern=/sh/
+
+匹配
+字符串中有符合模式的内容，就称为匹配。模式的字符有顺序要求。
+
+正则函数
+test:pattern.test(str):检测pattern在str中是否有匹配的结果，返回值是布尔型。
+exec:pattern.exec(str);返回值是数组，里面包含了符合的第一个结果。如果没有匹配，返回null。
+match：str.match(pattern);返回值是数组，里面包含所有的匹配的结果，如果没有，返回null。
+search：str.search(pattern);返回匹配的字符出现的第一个位置的索引值，如果没有，返回-1。(类似于indexOf)
+
+
+模式修饰符
+g:global全局匹配
+i：insensitive大小写不敏感
+m:多行
+^:在行首查找
+$:在行尾查找
+禁止贪婪：.+?
+
+元字符
+[ ]:表示一个字符
+[ab]:a，b只要有一个匹配就为true
+[^a]：排除a
+[a-z]：任意一个小写字母
+[A-Z]：任意一个大写写字母
+[0-9]：任意一个数字=====[\d],[\D]:非数字。
+[0-9a-zA-Z]:
+[A-Za-z_]====[\w],[\W]:非[A-Za-z_]
+. :匹配非空任意字符
+\.转义为普通的点
+\s:空格
+\S:非空格
+
+量词，修饰前导字符
+？：0次或者1次。
+*：任意次，包括0次。
++：至少一次。
+{n}:n次
+{n,}:至少n次
+{n,m},最少n，最多m。
+
+分组
+捕获性分组
+
+常用正则
+1.ubb转换为html
+2.验证邮编   /^[1-9][\d]{5}$/
+3.验证密码强度
+4.验证邮箱
+
+端午作业
+1.输入为空时，把空格删除
+需要处理的trim中全是空格的情况。
+trim(" ");
+function trim(value){
+        var pattern=/^(\s*)$/;
+        if(pattern.test(value)){
+                
+                value=value.replace(pattern,"$1");
+                console.log(value.length);
+        }else{
+
+        }
+        
+}
+2.复习JavaScript
+3.预习ajax
+
+
+
+网络环境
+Apache
+IIS:internet information service
+
+后台语言
+PHP,7,面向对象
+jsp
+aspx
+
+数据库
+mysql+phpmyadmin
+[127.0.0.1/phpmyadmin]
+sql server:ms
+oracle:
+
+
+127.0.0.1本地环境localhost
+局域网：192.168.
+
+
+ajax对象
+Asynchrous JavaScript And  XML
+Asynchrous JavaScript And  PHP+MySQL
+
+
+属性
+xhr.responseText:以字符串的形式接收后台返回的数据。
+xhr.responseXML:以XML的形式接收后台返回的数据。
+xhr.readyState:状态值,0,1,2,3,4,4是交互成功。
+xhr.status:http的状态码，404文件未找到，200：返回数据成功。
+方法
+xhr.open("post","reg.php"):xhr链接php文件
+xhr.send();向PHP文件发送数据
+事件
+readystatechange状态改变事件
+
+
+0531作业
+完成注册验证
+
+
+前端会话
+数据会保存在前端，但页面间可以共享数据，生命周期为浏览器的关闭。
+sessionStorage.setItem(key,value);保存数据
+sessionStorage.getItem(key);获取数据
+sessionStorage.removeItem(key);删除数据
+
+
+JavaScript动画
+元素.animate(frames,timing)
+frames:[{},{}]每个对象就是每隔帧
+timing:{}动画的参数
+//登录失败晃动
+ var loginLeft=parseInt(login.style.left);
+ //帧
+var frames=[
+//第一帧
+{left:(loginLeft+15)+"px"},
+//第二帧
+{left:(loginLeft-15)+"px"},
+ //最后一帧
+{left:loginLeft+"px"}
+];
+                                                        var timing={
+                                                                /*动画持续时间*/
+                                                                duration:150,
+                                                                /*每帧停留时间*/
+                                                                
+                                                                delay:0,
+                                                                /*循环次数：Infinity:无限*/+
+                                                                iterations:5,
+                                                                /*方向：alternate*/
+                                                                direction:"normal",
+                                                                /*运动模式：ease加速或减速,linear线性*/
+                                                                easing:'ease-in-out',
+                                                                /*停留在最后一帧,backward停留在第一帧*/
+                                                                fill:'forwards'
+                                                        }
+                                                        login.animate(frames,timing);
+0601作业
+把邮箱验证加入到注册中
+
+html5
+picture图片的自适应标签，根据设定的移动设备的尺寸显示相应的图片
+source标签用在父标签的选项。
+dialog对话框标签，open属性可以dialog显示。结合js可以实现复杂的操作。
+SVG:scalable vector graphic可缩放的矢量图标签。
+画圆 <circle/>
+<svg style="width:300px;height: 300px;border:1px solid red">
+                <!-- cx:circle x;cy:circle y;r:radius半径 -->
+                <circle cx=100 cy=100 r=100 style="stroke: black;fill:purple">
+        </svg>
+cx，cy圆形的中心点坐标
+r：radius半径
+stroke：笔触
+fill:填充
+画矩形 <rect/>
+<svg style="width:300px;height: 300px;border:1px solid red">
+       <rect width=300 height=100 x=0 y=0 style="stroke: red;fill:orange;stroke-width:1">
+</svg>
+stroke-width：笔触的粗细
+椭圆<ellipse/>
+<ellipse cx=100 cy=100 rx=50 ry=130 style="stroke:red;fill:transparent;">
+rx：水平半径的长度
+ry：垂直半径的长度
+线，线由两个端点组成，分别是x1 y1,x2 y2
+<line x1=0 y1=0 x2=50 y2=35 style="stroke:red;stroke-width:1">
+多边形<polygon/>
+<polygon points="0,0 200,180 150,25 15,280" style="stroke: red;">
+points：多变形的各个点
+多线段<polyline/>
+<polyline points="0,0 0,20 20,40 269,280" style="stroke: red;">
+路径
+path路径
+d：data路径的数据
+m：moveTo:起始点
+l:lineTo:结束点
+H：horizontal水平线
+V：vertical垂直线
+C：curve曲线，三次贝兹曲线
+S:平滑曲线
+q:二次贝兹曲线
+A:arc弧线
+z:closePath结束路径
+路径
+<path d="M20,20 L120,50 L10,290 " style="stroke:green;stroke-width:5px;fill:transparent;">
+贝兹曲线
+<path d="M20 20 C30 40 130 540 280 30" style="stroke:green;fill:none">
+动画1
+<g>
+  <text x=100 y=100 style="font-family: georgia;font-size:25px">Morning</text>
+ <animateTransform attributeName="transform" begin="0s" dur="3s" type="rotate" from="0 100 150" to="160 100 150" repeatCount="1" fill="remove">
+</g>
+g：group群组，把多个标签群组。
+animateTransform：形变动画
+ attributeName：属性
+begin：开始的时间，s为毫秒。
+dur：duration动画持续的时间，s为毫秒
+type：类型
+from：角度 x y
+to：角度 x y
+repeatCount:重复次数  indefinite无限
+fill设定动画结束时的状态，remove停留在第一帧，freeze停留在最后一帧。
+动画2
+<svg style="width:300px;height: 300px;border:1px solid red">
+        <!-- g:group群组 -->
+                <g>
+                        <text x=100 y=100 style="font-family: georgia;font-size:25px">Morning
+      <animate attributeName="y" from="0" to="200" begin="0s" dur="3s" fill="freeze">
+                        </text>
+                </g>
+ </svg>
+路径跟随动画
+<svg style="width:300px;height: 300px;border:1px solid red">
+        <!-- g:group群组 -->
+                <g>
+                        <text x=-50 y=0 style="font-family: georgia;font-size:25px">Morning
+        <animateMotion path="M20 20 C30 40 130 540 280 30" begin="0s" dur="5s" repeatCount="1" fill="freeze" rotate="auto">
+                        </text>
+<path d="M20 20 C30 40 130 540 280 30" style="stroke:green;fill:none">
+                </g>
+ </svg>
+虚线
+stroke-dasharray:两个值，第一个值虚线的宽度，第二个值是虚线之间的距离，起始位置在右侧。
+stroke-dashoffset:虚线段的偏移。
+
+虚线的解释
+https://segmentfault.com/a/1190000007309718
+
+虚线动画
+<svg style="width:300px;height: 300px;border:1px solid red">
+        <circle id="demo" cx=50% cy=50% r=100 style="stroke-width:3px;fill:none;stroke:green;"/>
+        <circle  cx=50% cy=50% r=100 style="stroke-width:3px;fill:none;stroke:green;opacity: 0.3"/>
+  </svg>
+    
+    
+ 自适应adaptive design
+ <meta name="viewport" content="width=device-width"> 页面的宽度等于设备的跨度 
+/* ipad */
+                @media screen and (max-width:780px){
+                        .left{
+                                background: gray;
+                        }
+                        .right{
+                                background:navy;
+                        }
+                }
+0602作业
+仿去哪儿网，相同的部分忽略。
+https://www.qunar.com/?tab=hotel&ex_track=auto_4e0d874a
+为作业添加注册登录
+为作业添加自适应
+svg
+
+
+前端的动画
+css 3animation
+js的animate
+jquery动画
+
+
+
+
+
+md:markdown,简化版的html。
+
+github多人开发
+fork别人的库，然后这个库的内容就保存到了自己的名下。
+clone自己的这个库，在客户端开发
+客户端开发后好，需要commit to master,然后再fetch origin。
+然后在自己的库中，new pull request>create pull request
+对方就后收到这个pull request,然后merge。
+
+客户端创建新库
+create new repository,需要选择本地路径。
+客户端发布新库
+publish respository
+库中编辑文件
+更新到github上
+
+项目
+时间3天
+设计：卡片式布局
+头部尾部  https://angular.cn/
+中间的内容 http://www.webonly.org/project/css/index/index.html
+滚动条滚动时导航栏固定在顶部，右下角可以点击回到顶部，最好是动画实现。
+轮播头部图片
+登录注册
+自适应
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+let关键字
+声明局部变量
+var lis=document.querySelectorAll("li");
+                //console.log(lis);
+                for(let i=0;i<lis.length;i++){
+                        lis[i].addEventListener("click",function(){
+                                alert(i);
+                        });
+}
+
+let版的tab
+//获取多个list
+        var lis=document.querySelectorAll(".demo li");
+        var divs=document.querySelectorAll("div");
+        //console.log(lis.length);
+        //通过循环为多个元素绑定事件
+        for(let i=0;i<lis.length;i++){
+                lis[i].addEventListener("click",function(){
+                        for(var j=0;j<lis.length;j++){
+                                lis[j].className="";
+                                divs[j].className="";
+                        }
+                        //console.log(this.title);
+                        divs[i].className="spotlight";
+                        this.className="active";
+                });
+        }
+history对象
+history对象的push和replace操作是无刷新的动作。
+属性
+length
+state：历史对象状态。
+方法
+go(n):n可以为正，也可以为负。
+back();回到后面一条历史记录
+forward()：回到前面一条历史记录。
+push(data,title,url)：向历史记录对象中添加一条记录。
+replace(data,title,url)将当前的历史记录删除。
+事件
+popstate：历史对象发生了push或replace时就会触发这个事件。
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+</head>
+<body>
+<script>
+        document.write(new Date().toLocaleString()+"<br>");
+</script>
+<button class="back">back</button><br>
+<button class="add">add</button><br>
+<button class="replace">replace</button><br>
+        <script>
+                var back=document.querySelector(".back");
+                var add=document.querySelector(".add");
+                var replace=document.querySelector(".replace");
+                //http://www.a.com/index.php#bottom?page=5;
+                //添加历史记录
+                add.addEventListener("click",()=>{
+                        //向历史对象中添加一条历史记录
+                        history.pushState({"username":"tom"},'demo',"?page=5");
+                });
+                //替换历史记录
+                replace.addEventListener("click",()=>{
+                        //历史对象中删除一条历史记录
+                        history.replaceState("",'demo',"?page=55");
+                });
+                //后退按钮
+                back.addEventListener("click",function(){
+                        history.go(-1);
+                })
+                //历史记录改变时触发(前进后退时触发)
+                window.addEventListener("popstate",function(evt){
+                        console.log(evt.state);
+                        console.log(evt.state.username);
+                });
+                console.log(history);
+        </script>
+</body>
+</html>
+元素的拖动
+draggable="true"：元素可拖动
+evt.target指代的是事件的发送者
+evt.dataTransfer:数据传递对象
+evt.dataTransfer.setData(key,value);向数据传递对象保存数据
+evt.dataTransfer.getData(key);读取数据传递对象保存的数据。
+
+
+appendChild()把元素追加到指定的元素中
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+                .demo{
+                        border:1px solid red;
+                }
+        </style>
+</head>
+<body>
+        <div class="demo"></div>
+        <button class="btn">click</button>
+        <script>
+                var btn=document.querySelector(".btn");
+                var demo=document.querySelector(".demo");
+                btn.addEventListener("click",function(){
+                        var h1=document.createElement("h1");
+                        h1.innerHTML="追加的内容";
+                        demo.appendChild(h1);
+                });
+        </script>
+</body>
+</html>
+dialog对话标签
+1.dialog的open属性
+通过dialog.setAttribute("open",true);和dialog.removeAttribute("open");控制dialog的显示和隐藏。
+2.dialog的close()和show()方法
+3.dialog的showModal()以模态框的形式显示
+4.dialog的close事件可以接受数据
+5.dialog的returnValue属性，当dialog关闭时，会返回close接收的数据，returnValue就是close接收的数据
+6.dialog中的form的method的值为dialog，form中的button的值就可以被returnValue获取。
+files对象
+FileList类型（数组），获取的是上传文件的数据，包含了上传文件的name,type,size。
+files[index].name名称
+files[index].size大小，单位是字节
+files[index].type类型
+
+FileReader对象
+读取文件
+方法
+readAsDataURL(files)
+把files读取为DataURL格式，用在读取图片。
+readAsBinaryString(files)
+把files读取为二进制的字符串，一般读非图片，非text。
+readAsText:读文本文件
+slice
+事件
+load:加载成功后
+loadstart：开始加载
+loadend:加载结束，不论成功与否。
+progress：进度
+evt.loaded:已经加载的字节
+evt.total:总字节
+evt.lengthComputable：文件可计算的长度。
+作业0612
+上传图片预览，加上验证，不能出现上传按钮
+进度条。不能出现上传按钮。
+
+FormData对象
+用在ajax中传递数据。
+fd.append(key,value);
+ajax
+new XMLHttpRequest()
+属性
+readyState:5个状态，4是交互完成。
+status：http状态码，200获取返回的数据成功。404,。
+responseText:以字符串的形式接收后台返回的数据。
+responseXML:以xml的形式接收后台返回的数据。
+方法
+open(type,url):链接后台程序。
+send(null)：向后台程序发送数据。
+事件
+readystatechange:状态改变事件
+
+
+php
+运行在服务器端，目前的版本是7.x。80%以上的网站使用PHP。开源。
+早起模仿js，后来发展为面向对象的语言。
+
+工具
+zend studio：
+,phpstorm,
+
+获取后台的txt文件的内容
+var feedback=document.querySelector(".feedback");
+                var xhr=new XMLHttpRequest();
+                xhr.open("post","data.txt");
+                xhr.send(null);
+                xhr.addEventListener("readystatechange",function(){
+                        if(xhr.readyState==4){
+                                if(xhr.status==200){
+                                        feedback.innerHTML=xhr.responseText;
+                                }
+                        }
+        })
+获取后台的php的内容
+var feedback=document.querySelector(".feedback");
+                var xhr=new XMLHttpRequest();
+                xhr.open("post","data1.php");
+                feedback.innerHTML="加载中...";
+                xhr.send(null);
+                xhr.addEventListener("readystatechange",function(){
+                        if(xhr.readyState==4){
+                                if(xhr.status==200){
+                                        feedback.innerHTML=xhr.responseText;
+                                }
+                        }
+     })
+   发送数据
+    post
+    //设置数据发送的形式；
+xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+   /*username和pwd是后台要接收的两个变量 */
+xhr.send("username=tom&pwd=123456");
+    get
+    xhr.open("get","data3.php?username=peter&pwd=654321");
+    xhr.send(null);
+    FormData
+    ajax中传递数据，可以传递上传文件数据。
+    xhr.open("post","data4.php");
+    feedback.innerHTML="加载中...";
+    fd.append("username",username.value);
+    fd.append("pwd",pwd.value);
+   //fd保存上传文件
+    fd.append("pic",pic.files[0]);
+    xhr.send(fd);
+    
+视频video
+目前h5视频格式不统一，目前推荐是
+<video>
+       <source src="a.mp4" type="">
+       <source src="a.ogg" type="">
+        <source src="a.wav" type="">
+</video>
+属性
+controls播放控制界面
+poster：封面图片
+autoplay：自动播放
+loop：是否循环播放
+currentTime：当前播放的时间。\
+duration:总长的时间
+volume：音量
+muted：静音
+autobuffer:自动缓存
+playbackRate:播放速度，默认1,
+方法
+play():播放
+pause()：暂停
+事件
+timeupdate：播放时间改变事件
+
+视频播放器
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+                *{
+                        margin:0;
+                        padding:0;
+                }
+                body{
+                        background: #eee;
+                }
+                .player{
+                        border:1px solid red;
+                        height:686px;
+                        width:860px;
+                }
+                .player_header{
+                        height:40px;
+                        background:rgba(0,0,0,0.8);
+                }
+                .player_body{
+                        height: 616px;
+
+                }
+                .player_body video,.player_body video source{
+                        width:100%;
+                        height:616px;
+                }
+                .player_footer{
+                        height:30px;
+                        background:#fff;
+                }
+                .controls li{
+                        display:inline-block;
+                        cursor: pointer;
+                }
+                .controls_fullscreen{
+                        background: gray;
+                        position:fixed;
+                        z-index:2147483648;
+                        width:100%;
+                        left:0;
+                        bottom:0px;
+                }
+        </style>
+</head>
+<body>
+        <div class="player">
+                <div class="player_header">
+                        
+                </div>
+                <div class="player_body">
+                        <video poster="2.jpg" class="media">
+                                <source src="a.mp4" type="">
+                        </video>
+                </div>
+                <div class="player_footer">
+                        <ul class="controls">
+                                <li class="controlBtn">播放</li>
+                                <li><input type='range' value=0 max=100 min=0 class="progressBar"></li>
+                                <li class="timeProgress">12/500</li>
+                                <li><input type='range' max=100 min=0 class="volumeBtn" value=100></li>
+                                <li class="volumeProgress">100</li>
+                                <li class="mute">静音</li>
+                                <li class="fullscreenBtn">全屏</li>
+                        </ul>
+                </div>
+        </div>
+        <script>
+                var controlBtn=document.querySelector(".controlBtn");
+                var media=document.querySelector(".media");
+                var timeProgress=document.querySelector(".timeProgress");
+                var progressBar=document.querySelector(".progressBar");
+                var mute=document.querySelector(".mute");
+                var volumeBtn=document.querySelector(".volumeBtn");
+                var fullscreenBtn=document.querySelector(".fullscreenBtn");
+                var volumeProgress=document.querySelector(".volumeProgress");
+                var player_footer=document.querySelector(".player_footer");
+                //console.log(controlBtn);
+                var b=true;
+                /*点击 [播放停止] 切换*/
+                controlBtn.addEventListener("click", function(){
+                        if(b){
+                                media.play();
+                                b=false;
+                                this.innerHTML="停止";
+                        }else{
+                                media.pause();
+                                b=true;
+                                this.innerHTML="播放";
+                        }
+                })
+                /*时间更新事件*/
+                media.addEventListener("timeupdate",function(){
+                        //时间进度
+                        timeProgress.innerHTML=parseInt(this.currentTime)+"/"+parseInt(this.duration);
+                        //进度条
+                        progressBar.value=parseInt(this.currentTime);
+                        progressBar.max=parseInt(this.duration);
+                        //console.log(this.currentTime);
+                        //console.log(this.duration);
+                });
+                /*拖动进度条*/
+                var isDrag=true;
+                /*鼠标按下*/
+                progressBar.addEventListener("mousedown",function(){
+                        isDrag=true;
+                })
+                /*鼠标拖动*/
+                progressBar.addEventListener("mousemove",function(){
+                        if(isDrag){
+                                //把进度条的值赋给视频的currentTime;
+                                media.currentTime=this.value;
+                                //拖动进度条，播放时间进度也相应变化
+                                timeProgress.innerHTML=parseInt(media.currentTime)+"/"+parseInt(media.duration);
+                        }
+                })
+                /*鼠标松开*/
+                progressBar.addEventListener("mouseup",function(){
+                        isDrag=false;
+                })
+                /*temp变量保存当前的音量*/
+                var temp=null;
+                /*[静音开启]切换*/
+                mute.addEventListener('click',function(){
+                        /*[静音开启]切换*/
+                        media.muted=(media.muted==true)?false:true;
+                        /*[静音开启]文字*/
+                        mute.innerHTML=(media.muted==true)?"开启":"静音";
+                        /*点击静音时，把当前的音量保存到temp变量中*/
+                        if(media.muted==true){
+                                temp=volumeBtn.value;
+                                volumeBtn.value=0;
+                                volumeProgress.innerHTML=0;
+                        }else{
+                                volumeBtn.value=temp;
+                                volumeProgress.innerHTML=temp;
+                        }
+
+                })
+                /*默认音量 0-1*/
+                /*media.volume=0.66;*/
+                /*拖动音量进度条*/
+                volumeBtn.addEventListener("mousemove",function(){
+                        media.volume=this.value/100;
+                        volumeProgress.innerHTML=this.value;
+                        /*[静音开启]切换*/
+                        if(this.value==0){
+                                mute.innerHTML="开启";
+                                
+                        }else{
+                                mute.innerHTML="静音";
+                                media.volume=this.value;
+                        }
+                });
+                /*全屏切换*/
+                var isFullScreen=true;
+                fullscreenBtn.addEventListener("click",function(){
+                        if(isFullScreen){
+                                //webkit下的全屏
+                                media.webkitRequestFullscreen();
+                                //自己的player_footer覆盖了原生的controls
+                                player_footer.className="controls_fullscreen player_footer";
+                                isFullScreen=false;
+                                this.innerHTML="缩小";
+                        }else{
+                                media.webkitExitFullscreen();
+                                player_footer.className="player_footer";
+                                isFullScreen=true;
+                                this.innerHTML="全屏";
+                        }
+                })
+        </script>
+</body>
+</html>
+
+function timeConvert(timeValue){
+    var mydate=new Date();
+    var starttime=mydate.getTime();
+    var timer=setInterval(function(){
+        var s=new Date();
+        var d=s.getTime()-starttime;
+        d=parseInt(d/1000);
+        u1=Math.floor(d/60);
+        u2=Math.floor(d%60);
+        if (u1<10) u1='0' + u1;
+        if (u2<10) u2='0' + u2;
+        console.log(u1+":"+u2);
+    },1000);
+}
+timeConvert();
+作业0613
+1.修饰播放器的外观
+2.时间格式01:25:34(时分秒)
+3.FormData的用法
+
+
+本地存储
+数据保存到客户端，部分的取代了后台的功能。
+1.sessionStorage，浏览器关闭，生命周期结束。
+setItem(key,value)
+getItem(key)
+removeItem(key)
+clear()
+key(index):根据index的值，获取相应的key的名字。
+length
+2.localStorage
+生命周期：永远存在，保存在本地。
+setItem(key,value)
+getItem(key)
+removeItem(key)
+clear()
+key(index):根据index的值，获取相应的key的名字。
+length
+
+JSON对象
+JSON.stringify():把json对象转换为字符串。
+JSON.parse()：把字符串解析为json对象，字符串的key和value必须是双引。
+eval（str）
+把符合js语法的字符串解析为语法
+
+自定义函数
+set(key,value)
+get(key,lifeTime)
+
+cookies
+保存在本地，可以设置生命周期。取值赋值不方便。如果没有设置终止日期的话，浏览器关闭
+cookie就消失
+是document的子对象
+document.cookie="username=tom;expires=终止时间;path=aaa;domain=bbb;secure";
+
+修剪字符串1
+var city="shanghai";
+var str="shanghai;beijing;chengdu";
+var strStart=str.indexOf(city);
+console.log(strStart);
+ var strEnd=str.indexOf(";",strStart);
+console.log(strEnd);
+ console.log(str.substring(strStart,strEnd));
+
+
+sql：structured query language
+结构化查询语言，不同的数据库语法稍有差异。操作数据库。
+增 insert into 表名()values()
+删 delete from 表名
+改 update 表名 set username='tom'
+查 select * from 表名
+web sql
+建立了一个本地的数据库。
+创建数据库
+openDatabase(数据库名，版本，数据库的描述，大小,回调函数)
+transaction:执行事务，
+
+web sql
+本地的数据库，执行的sql是sql lite，还借鉴了执行sql时的预处理。
+openDatabase()对象
+数据库对象
+sql transaction对象
+执行事务，通过executeSql()方法执行增删改查的sql语句。
+查询
+executeSql("select * from 表名",[],callback);
+增加
+value1传给第一个？，value2传给第二个？
+executeSql("insert into 表名(字段名)values(?,?)",[value1,value2],callback);
+删除
+id为传递？的值
+where为sql的条件句，删除必须要设定条件。
+executeSql("delete from 表名 where id=?",[id],callback)
+修改
+value为第一个？，是字段新的值
+executeSql("update 表名 set 字段名=? where id=?",[value,id])；
+
+
+indexedDB
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+</head>
+<body>
+        <button class="addBtn">添加</button>
+        <script>
+                var addBtn=document.querySelector(".addBtn");
+                var db;
+                /*创建indexedDB对象*/
+                var indexedDB=window.indexedDB;
+                //创建数据库
+                var request=indexedDB.open("gustbookt",7);
+                //当错误发生时，触发错误事件
+                request.addEventListener("error",function(){
+                        console.log("数据库创建错误");
+                });
+                /*版本升级事件,创建表*/
+                request.addEventListener("upgradeneeded",function(evt){
+                        //console.log(evt.target.result);
+                        db=evt.target.result;
+                        //创建表member3;
+ var objectstore=db.createObjectStore("member3",{keyPath:"id",autoIncrement:true});
+                        objectstore.createIndex("name","name",{unique:false});
+                        //console.log(objectstore);
+                });
+                //创建成功事件,添加成功后，需重新打开浏览器查看;
+                request.addEventListener("success",function(evt){
+                        console.log("数据库创建成功");
+                        db=evt.target.result;
+                        addBtn.addEventListener("click",function(){
+                                //alert(db);
+                                //向表中要添加的数据
+                                let vip=[{name:"amanda","phone":23234234}];
+                                //设置表的属性为可读写
+                                let transaction=db.transaction(['member3'],"readwrite");
+                                //加载表member3
+                                let objectstore=transaction.objectStore("member3");
+                                //向表member3中添加数据
+                                objectstore.add(vip);
+                                console.log(transaction);
+                        });
+                        //console.log(db);
+                });
+        </script>
+</body>
+</html>
+缓存
+声明缓存文件，把html，css，js三个文件声明为缓存文件
+CACHE MANIFEST
+cache.html
+time.js
+time.css
+在html中
+<html lang="en" manifest="cachedemo.manifest">
+
+canvas画布
+有默认尺寸，300X150
+画布元素的.getContext("2d");
+2d渲染引擎处理处理位图，矢量图，动画
+
+stroke笔触
+渐变色的矩形
+<script>
+                var myCanvas=document.querySelector(".demo");
+                var context=myCanvas.getContext("2d");
+                /*rect(x,y,width,height)*/
+                context.rect(20,20,100,100);
+                /*createLinearGradient(x1,y1,x2,y2)
+                        渐变色的两个坐标点
+                */
+                var gradient=context.createLinearGradient(150,0,150,150);
+                gradient.addColorStop("0","red");
+                gradient.addColorStop("0.5","green");
+                gradient.addColorStop("1","blue");
+                //填充色
+                context.fillStyle=gradient;
+                //填充
+                context.fill();
+                /*绘制*/
+                context.stroke();
+        </script>
+
+0617周末作业
+1.一周内不用登陆
+2.注册（ajax，返回注册的数据，上传文件，验证，预览）；
+
+
+0619作业
+注册和登录，数据保存到web sql中。
+
+
+Promise对象
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+jQuery是JS的库，本质上就是新增了一个jQuery对象
+快，小，特性丰富
+必须先引入jQuery库
+write less,do more
+丰富的选择器(从css借鉴)
+动画功能
+强大的方法(each)
+事实上的标准(bootstrap，angular用到了jquery)，趋势是被原生的js给替代。
+属性方法化
+链式操作(chain)
+弥补了浏览器的兼容性问题。不考虑ie6,7,8.(优雅的降级，渐进式增强)
+
+
+jQuery对象
+jQuery
+$
+选择器的结构
+$(selector)
+jQuery(selector)
+返回值是数组，如果没有符合的元素，返回值是空数组。选择器的返回值可以直接绑定事件。
+
+选择器 48种
+一、基本选择器
+1.标签选择器  $("img")
+2.id选择器     $("#ad");
+3.类选择器     $(".ad")
+4.并集选择器  $(".ad,#ad,h1")
+5.全局选择器  $("*")
+
+二、层次选择器
+1.后代选择器  $(父选择器 子选择器 子选择器)：层级关系
+2.子选择器      $(父选择器>子选择器)：子选择器是父选择器的第一层级，不包含更下一层级。
+3.next sibling：$(父选择器+子选择器)紧邻其后的第一个元素
+4.其后所有的兄弟元素，$(父选择器~子选择器)： all siblings
+
+过滤选择器
+1.基本过滤选择器
+:first，第一个子元素
+:last，最后一个子元素
+:not(selector1，selector2):排除selector,也可以排除多个
+:gt(index):gt:great than;大于
+:lt(index):lt:less than，小于
+:eq(index):选择索引值为index的元素
+2.内容过滤选择器
+:has(selector1,selector2):含有selector的元素,可以包含多个。selector1在父元素
+selecotr里面
+:empty()空元素：没有子元素，也没有文本。
+:contains(text):含有text的元素。
+3.可见性过滤选择器
+:hidden所有不可见的元素
+:visible所有可见的元素。
+4.属性过滤选择器
+a含有href属性的
+//$("a[href]").css({"color":"red"});
+ href的值是baidu
+//$("a[href=baidu]").css({"color":"red"});
+ href的值不是baidu
+//$("a[href!=baidu]").css({"color":"red"});
+ 属性值是以baidu开头的
+ //$("a[href^=baidu]").css({"color":"red"});
+ 属性值是以baidu结尾的
+ //$("a[href$=baidu]").css({"color":"red"});
+ 属性值含有baidu的
+//$("a[href*=baidu]").css({"color":"red"});
+多个属性
+ $("a[href='baidu.com'][title=hello][class=demo]").css({"color":"red"});
+5.子元素过滤选择器
+第一个子元素
+$("li:first-child").css({"color":"red"});
+最后一个子元素
+$("li:last-child").css({"color":"red"});
+唯一一个子元素
+$("li:only-child").css({"color":"red"});
+指定的子元素，参数可以是odd，even，2n等
+$("li:nth-child(1)").css({"color":"green"});
+6.表单对象属性选择器
+:disabled:不可用的
+:enabled:可用的
+:checked：被选择的
+:selectd:下拉列表中被选择的
+7.表单选择器
+:input:包含input,textarea,select,button,submit,reset
+文本输入域，input type="text"
+//$(":text").css({"background":"red"});
+密码元素
+//$(":password").css({"background":"red"});
+提交按钮
+//$(":submit").css({"background":"red"});
+重置按钮
+//$(":reset").css({"background":"red"});
+图片按钮
+//$(":image").css({"border":"1px solid red"});
+普通按钮
+//$(":button").css({"background":"red"});
+上传按钮
+//$(":file").css({"background":"red"});
+单选按钮
+console.log($(":radio"));
+多选按钮
+console.log($(":checkbox"));
+隐藏input
+console.log($("input:hidden"));
+
+jQuery对象与DOM对象
+jQuery对象只能使用它自身的属性和方法。
+jQuery对象转换为DOM对象
+jQuery对象[index]
+jQuery对象.get(index)
+DOM对象转换为jQuery对象
+$(DOM对象)
+
+jQuery对象属性
+
+常用方法
+$(selector).css({key:value});=====>element.style.
+html(content):如果有参数是赋值，没有参数是取值。=====》innerHTML
+text(content):如果有参数是赋值，没有参数是取值。=====》innerText
+val();操作表单元素，:如果有参数是赋值，没有参数是取值。====》value
+width();宽
+height();高
+scrollTop()垂直滚动条的滚动的高度
+scrollLeft()垂直滚动条的滚动的宽度
+size()；获取元素的索引值
+addClass()添加类
+removeClass()移除类
+toggleClass(className),自动检测元素中是否有className,如果有就移除，没有就添加。
+attr(key,value)||attr({key:value,key:value})
+each(function(index){});循环，理解成js中的forEach()循环,index是元素的索引值。
+selector.append(content);把string追加到指定的selector元素中，与js中的appendChild()的区别在于，appendChild()只能追加元素。
+$(content).appendTo(selector)把content追加到指定的selector元素中。
+$(content).prependTo(selector);追加到selector的内容之前
+find()：查找所有的所有的子元素
+children：查找直接子元素，不向下找。
+eq(index):根据索引值查找相应的元素
+$(selector).load(url);把url的文件加载到指定的元素中。
+
+0620作业
+1.单选的切换
+2.jQuery的居中
+3.掌握选择器和常用方法
+
+$(this)是特殊变量，指代的是事件的发送者，是jquery对象。
+this是特殊变量，指代的是事件的发送者，是DOM对象。
+
+jQuery的事件
+绑定事件
+1.bind(type,fn)=====>addEventListener(type,fn);
+unbind(type,fn)=====>removeEventListener();
+2.on(type,fn)绑定事件 off(type,fn)解除绑定
+绑定一个事件on("click",fn)
+绑定多个事件on("click mouseover",fn)
+绑定自定义事件，一般需要trigger触发一下。
+$("h1").on("changeColor",function(){
+         $(this).addClass("active");
+ });
+ $(".btn").click(function(){
+        $("h1").trigger("changeColor");
+});
+为子元素绑定事件，触发的是div下面的h1的事件
+$("div").on("click","h1",function(){
+       console.log($(this));
+       $(this).toggleClass("active");
+});
+为虚拟元素绑定事件，p为虚拟元素。
+$("div").on("click","p",function(){
+       $(this).toggleClass("active");
+});
+$("button").click(function(){
+      $("<p>这是插入的文本</p>").insertAfter("button");
+});
+off解除事件绑定
+off(type):解除指定的事件。
+one(type):事件只执行一次就自动解除绑定。
+事件的简写
+$(selector).click(fn)|mouseover,mouseout,mousemove,keyup,keydown,change,foucs,blur
+hover(fnOver,fnOut)封装了mouseover()和mouseout()
+change 图片预览
+trigger();触发自定义事件。
+加载事件
+$(document).ready(fn):DOM加载，加载时机比load提前。
+$(fn)
+事件对象
+
+window.event(在低版本的ie中，事件对象是window对象的子对象)
+h1.addEventListener("click",function(evt){});非ie下，事件对象是事件函数的参数。
+////////////////////////////////////////////////////////////////////////
+keyCode:键值
+preventDefault();阻止默认动作
+stopPropagation()：阻止冒泡
+pageX,鼠标在对象上的坐标
+pageY,鼠标在对象上的坐标
+dataTransfer:拖动时传递数据对象
+evt.target:指代的是事件的发送者
+/////////////////////////////////
+on绑定事件中  evt.data事件中传递数据
+evt.clientX:事件触发时，鼠标相对于文档的x轴。
+evt.clientY:事件触发时，鼠标相对于文档的y轴。
+
+0621作业
+1.tab+load
+2.拖动：只在当前窗口拖动
+
+jQuery动画
+animate({key:value},duration,callback);callback时机，动画执行结束后再执行。
+由目前的属性到指定的属性的动画
+hide()|show():高度，宽度，透明度
+元素消失，没有参数，没有动画效果。
+参数分为字符串和数字，字符串只有fast,normal,slow，数字。
+fadeIn(),fadeOut,fadeTo(),fadeToggle()渐隐，渐显，透明度
+slideDown(),slideUp(),slideToggle()：高度
+
+作业0623
+用jquery重写登录注册
+
+
+异步
+对js的ajax进行了封装,$.get()只能是get方式传值，$.post()以post方式传值。
+$.load();
+$.get();
+$.post();
+$.ajax();
+////////////////////////////////
+$.ajax({
+    "type":"post"，后台传递数据的形式
+    "url":"1.php",链接的后台程序
+    'data':{key:value,key:value}向后台传值
+    "beforeSend":function(){}后台已经链接
+    "success":function(){}成功获取后台数据
+})
+//////////////
+xhr.open();
+xhr.send(fd);
+xhr.addEventListener();
+jquery ajax FormData传值
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="js/jquery3.2.1.js"></script>
+</head>
+<body>
+        <input type="file" class="pic">
+        <script>
+                var fd=new FormData();
+                $(".pic").change(function(){
+                        fd.append("gender","male");
+                        fd.append("pic",this.files[0]);
+                        $.ajax({
+                                'url':"formdata.php",
+                                'type':"post",
+                                /*jquery支持FormData的属性*/
+                                "processData": false,
+                    'contentType': false,
+                                'data':fd,
+                                'success':function(response){
+                                        console.log(response);
+                                }
+                        });
+                });
+        </script>
+</body>
+</html>
+js的面向对象
+汽车
+颜色，车门，重量：静态===》属性
+启动，转弯，刹车：动态===》方法()
+str.length;属性
+str.indexOf();方法
+创建对象1
+//空对象
+var obj=new Object();
+//添加属性
+obj.color="red";
+//添加方法
+obj.msg=function(){
+     alert("msg");
+}
+ console.log(obj);
+ //打印对象的属性
+ console.log(obj.color);
+ //调用对象的方法
+ obj.msg();
+对象字面量的形式创建对象2
+        var member={
+                "username":"black smith",
+                'gender':"male",
+                'msg':function(){
+                        alert("msg");
+                },
+                'Info':{
+                        'email':"b@b.com",
+                        'add':"868 Beijing Road"
+                }
+        };
+        console.log(member);
+        //打印属性
+        console.log(member.gender);
+        //调用方法
+        member.msg();
+        console.log(member.Info.email);
+ 构造函数创建对象3
+ function Member(_color,_username){
+                this.color=_color;
+                this.username=_username;
+                this.msg=function(){
+                        alert(this.color+this.username);
+                }
+        }
+        //实例化Member
+        var m=new Member("red","tom");
+        //实例化Member
+        var m2=new Member("green","peter");
+        console.log(typeof m);
+        console.log(m2);
+        //调用方法
+        m.msg();
+ 原型模式创建对象4
+  //空对象
+        function Car(){
+
+        }
+        //为空对象添加属性
+        Car.prototype.color="pink"
+        //为空对象添加方法
+        Car.prototype.msg=function(){
+                alert("msg");
+        }
+        console.log(Car);
+        //打印属性
+        console.log(new Car().color);
+        //调用方法
+        new Car().msg();
+class创建对象（es6）
+ECMA script 6
+一个基本的类
+//声明Car类
+        class Car{
+                //构造方法,初始化类
+                //构造方法无需调用，类初始化时会自动调用
+                constructor(){
+                        console.log("我是构造方法");
+                }
+                //msg()方法
+                msg(){
+                        console.log("我是msg方法");
+                }
+        }
+        //实例化Car
+        var c=new Car();
+        //调用方法
+        c.msg();
+ 类的继承
+子类继承了父类的属性和方法
+1.子类继承了父类的所有的属性和方法。
+2.子类可以添加新的属性和方法。
+3.子类可以重写父类的属性和方法。
+子类要调用父类的构造方法的话，需要执行super
+super(_color);继承了父类的color参数
+<script>
+        //声明Car类
+        class Car{
+                //构造方法,初始化类
+                //构造方法无需调用，类初始化时会自动调用
+                constructor(_color){
+                        this.color=_color;
+                        //console.log(this);
+                }
+                //msg()方法
+                msg(){
+                        alert(this.color);
+                }
+        }
+        /*extends:继承
+                1.子类继承了父类的所有的属性和方法。
+                2.子类可以添加新的属性和方法。
+                3.子类可以重写父类的属性和方法。
+                子类要调用父类的构造方法的话，需要执行super
+                super(_color);继承了父类的color参数
+        */
+        //miniCar继承了Car类
+        class miniCar extends Car{
+                constructor(_color){
+                        super(_color);
+                        console.log("我是子类的构造方法");
+                }
+                sum(num1,num2){
+                        return num1+num2;
+                }
+                msg(){
+                        console.log("我是子类的msg");
+                }
+        }
+        //
+        var mini=new miniCar("pink");
+        console.log(mini);
+        mini.msg();
+        console.log(mini.sum(5,6));        
+</script>
+Function模式
+var Car=new Function("this.msg=function(){return 'hello'}");
+var c=new Car();
+console.log(c.msg());
+
+作业0626
+1.理论：typescript
+2.理论：ES6  
+3.无缝滚动优化+半透明按钮+标题
+
+学习知识
+http://es6.ruanyifeng.com/      
+https://www.w3cplus.com/        
+http://www.zhangxinxu.com/wordpress/
+www.github.com
+www.stackoverflow.com
+
+
+YUI:yahoo ui
+Bootstrap前端框架twitter（继承了布局，样式和js）
+kissy淘宝的前端框架
+网易前端框架
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Bootstrap，twitter公司的开源框架。
+为了更快速和更容易的web开发的小巧的，直观的，强大的前端开发框架。
+html5,移动优先
+官网：
+http://getbootstrap.com
+中文
+http://www.bootcss.com/
+
+特色
+布局
+样式
+行为
+
+
+bootstrap的样式都是通过类来实现的，这些类都是可以修改或者重写的。
+bootstrap对css的重置不同，
+在bootstrap.css中，为tr设置spotlight颜色主题
+/* 自定义表格主题开始 */
+.table > thead > tr > td.spotlight,
+.table > tbody > tr > td.spotlight,
+.table > tfoot > tr > td.spotlight,
+.table > thead > tr > th.spotlight,
+.table > tbody > tr > th.spotlight,
+.table > tfoot > tr > th.spotlight,
+.table > thead > tr.spotlight > td,
+.table > tbody > tr.spotlight > td,
+.table > tfoot > tr.spotlight > td,
+.table > thead > tr.spotlight > th,
+.table > tbody > tr.spotlight > th,
+.table > tfoot > tr.spotlight > th {
+  background-color: green;  
+}
+/*自定义表格主题结束  */
+
+css重置的两种风格
+reset.css:强制所有的元素的默认值清空
+normalize.css，清空一部分元素的默认值，比如body，尊重大多数元素的默认值。侧重点在于浏览器的兼容性上。这个方案被bootstrap吸收。
+
+布局
+container：默认是左右内边距15，水平居中，默认宽是1170
+container-fluid:默认是左右内边距15，width是100%
+row：行
+col-md-*:每一列都左右15的内边距，column列，md：中等的，
+col-sm小的，col-xs:最小，col-lg大的
+col-md-offset-*：列的偏移，在row内
+col-md-push-*:在一行内，会超过row的水平范围
+h1~6:字体大小
+small：比默认字体小一号
+lead:导语的内容。
+dl-horizontal：dl中国的dt和dd水平排列。
+list-unstyled:清除ul的列表项符号
+list-inline:为list添加inline-block;
+text-center: 内容居中
+table：一个基本的table
+table-bordered ：表格边框
+table-striped :条纹tr
+table-hover：鼠标放上的效果
+自适应表格
+当宽度变窄时，会出现水平滚动条，方便访问。结构必须是div包含住table。
+<div class="table-responsive">
+          <h1 class="spotlight">responsive</h1>
+           <table class="table table-bordered  table-hover text-center">
+                                                <tr class="warning">
+                                                        <td>tom peter mary</td>
+                                                        <td>tom peter mary</td>
+                                                        <td>tom peter mary</td>
+                                                </tr>
+                                                <tr class="danger">
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                </tr>
+                                                <tr class="spotlight">
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                        <td>1</td>
+                                                </tr>
+           </table>
+</div>
+
+字体图标
+glyphicon  250
+font-awesome  647
+google icons   970   (Material Design)
+iconfont.cn    130万
+先登录，选择图标放入购物车，添加至项目，
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="http://at.alicdn.com/t/font_5k9fnvy9wznf80k9.css">
+</head>
+<body>
+        <i class="iconfont icon-fenxiang1"></i>
+        <i class="iconfont icon-touxiang"></i>
+</body>
+</html>
+
+作业0627
+1.字体图标用在注册登录上
+2.视频播放器
+
+pk项目，用bootstrap
+http://www.webonly.org/project/css/index/index.html
+
+
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-2"></div>
+<div class="col-md-10 demo"></div>
+    </div>
+</div>
+
+
+
+css的重置
+1.normalize.css(Bootstrap.css):保留大部分元素的基本设置，侧重点在兼容性上。
+2.reset.css：强制清空元素的默认值。
+3.kissy.css：淘宝,，针对中文板式。
+
+
+bootstrap.js
+对jQuery有依赖
+
+
+
+作业0628
+https://vuejs.bootcss.com/  用bs布局
+
+模态框
+自定义显示模态框
+$(selector).modal(参数)，
+参数：show：显示模态框，hide：关闭模态框
+///////////////////////
+$(".btn").click(function(){
+           //bootstrap.js的内容方法;
+           //$(selector).modal()
+            $("#myModal").modal("show");
+});
+元素的属性
+data-toggle="modal"模态框切换
+data-target="#myModal":指向指定的模态框
+data-dismiss="modal":关闭模态框
+modal-lg：大的模态框，modal-sm:小的模态框，要加在modal-dialog 上。
+类
+fade：有渐隐渐现效果
+
+手风琴
+
+carousel轮播
+/*设置时间间隔*/
+$('.carousel').carousel({
+         interval: 2000
+})
+echart.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="echarts.js"></script>
+</head>
+<body>
+        <div id="main" style="width:600px;height:400px"></div>
+        <script>
+                //console.log(echarts);
+                /*初始化echart*/
+                var myChart=echarts.init(document.getElementById("main"));
+                var member=new Array("JavaScript",'PHP',"java",'CSS','HTML');
+                var data=new Array(5, 20, 36, 10, 10)
+                //console.log(myChart);
+                var option={
+                        title: {
+                text: '前端考试表'
+            },
+            tooltip: {},
+            //图例
+            legend: {
+                data:['成绩']
+            },
+            xAxis: {
+                data: member
+            },
+            yAxis: {},
+            //工具箱
+            toolbox:{
+                    show:true,
+                    feature:{
+                            mark:{show:true},
+                            dataView:{show:true,readOnly:false},
+                            magicType:{show:true,type:["line","bar"]},
+                            restore:{show:true},
+                            saveAsImage:{show:true},
+                            type:'shadow'
+                    }
+            },
+            series: [{
+                name: '成绩',
+                type: 'line',
+                data: data
+            }]
+                };
+                /*设置选项*/
+                myChart.setOption(option);
+        </script>
+</body>
+</html>
+
+作业0629
+1.饼图，数据从data.php，loading。
+
+
+
+//var_dump($_POST);
+sleep(1);
+//pdo链接数据库
+$pdo=new PDO("mysql:host=localhost;dbname=haiwen","root","root");
+//根据用户提交值在数据库中查询，返回结果集
+//select * from member where username like '%m%';
+//模糊查询
+$sql="select * from member where username like '%".$_POST['keyword']."%'";
+$search=$pdo->query($sql);
+//var_dump($search);从结果集中读取所有的数据
+//返回值是数组，没有符合的结果，返回空数组。
+$data=$search->fetchAll(PDO::FETCH_OBJ);
+//var_dump($search);
+if(count($data)){
+        echo json_encode($data);
+}else{
+        echo "none";
+}
+
+
+Sleek, intuitive, and powerful front-end framework for faster and easier web development.Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+HTML
+
+html:结构
+css：样式
+js：行为
+(jquery,angularJS,ReactJs,VUE)
+
+工具
+webstorm:
+sublime:文本编辑器
+hbuilder中文，国内
+
+html的特性
+不区分大小写
+双引和单引没区分
+空白符的折叠（空格和换行符只显示一个）
+容错性强
+
+字符集：utf-8
+
+
+html：页面结构  Bernas lee
+hypertext markup language超文本标识语言
+基本结构标签：<开标签>内容</闭标签>
+双标签：<开标签>内容</闭标签>
+单标签：<标签 />
+
+
+具体标签
+h1:head标题
+h1~6
+img：image图片，把图片链接到网页上。
+       <img src="图片路径">
+a:anchor锚点标签，在页面之间，或者页面的不同部分进行跳转
+          <a href=url target="_blank">内容</a>
+p：paragraph段落，段落之间有空行
+br：break强制换行，内容新起一行，没有空行。
+div:division区块，占一行
+span：区块，在 一行中。
+          
+基本标签
+html：告诉浏览器html之间的内容是html。
+head：文件头标签，里面放页面的头部信息，比如样式，js等不在body中显示的内容。
+body：正文，页面中显示的内容。
+
+列表标签
+ol：ordered list有序列表
+ol的属性：type：a,A,I,i排序的类型，默认是数字。start：设置排序的初始值。
+<ol type="a" start="5">
+    <li>tom</li>
+    <li>peter</li>
+    <li>mary</li>    
+</ol>
+ul：unordered list：无序列表
+li：list列表项
+ul的属性：type：disc,circle,square,默认是disc
+<ul type="square">
+    <li>tom</li>
+    <li>peter</li>
+    <li>mary</li>    
+</ul>
+dl：自定义列表，defination list
+dt：defination title自定义列表标题
+dd：defination data：自定义列表数据。
+<dl>
+    <dt>标题</dt>
+    <dd>内容1</dd>
+    <dd>内容2</dd>
+    <dd>内容3</dd>
+</dl>
+table表格
+table的属性
+border：边框的粗细。
+width宽
+height高
+align排列：center，left，right
+tr：行
+td:列，数据保存在td中。
+colspan：column span让td跨列
+rowspan：row span让td跨行
+
+form表单，收集用户的信息。表单元素作为form的子元素。
+form的属性：action：制定处理表单信息的后台程序，method=“post”，表单数据提交到后台程序的方式，值为post或者get。
+input：输入表单，用户可以输入数据。
+input的类型
+text：单行输入
+password:密码
+email：邮箱
+url：url地址
+radio：单选
+checkbox：多选
+number：数字 ，配合min和max使用
+range：范围，配合min和max使用
+color：颜色
+datetime-local:日期选择
+submit：提交按钮，可以提交表单
+reset：重置按钮，让表单元素的值恢复初始状态
+button：普通按钮，初始没有任何功能。
+image：图片按钮，必须配合src指定图片路径。有提交功能。
+textarea：多行文本输入
+select：选择
+option：是select的选项。
+表单元素中的属性
+placeholder：表单元素的提示文本
+required=“required”：元素为必填元素
+value：元素的输入值。
+下面是一个实际的表单
+<form action="reg.php" method="post">
+    <input type="text" placeholder="用户名" required="required"><br>
+    <input type="password" placeholder="密码" required="required"><br>
+    <input type="radio" nameplaceholder="用户名"="gender">男
+    <input type="radio" name="gender">女<br>
+    <input type="checkbox" name="hobby">文学
+    <input type="checkbox" name="hobby">艺术
+    <input type="checkbox" name="hobby">体育<br>
+    <input type="email"><br>
+    <input type="color"><br>
+    <input type="datetime-local"><br>
+<input type="number" value="5" min=1 max=10><br>
+<input type="range" value="3" min=1 max=10><br>
+    <input type="url"><br>
+    <textarea></textarea><br>
+    <select>
+        <option>请选择一个颜色</option>
+        <option>红</option>
+        <option>绿</option>
+        <option>蓝</option>
+    </select><br>
+    <input type="submit" value="提交按钮">
+    <input type="button" value="普通按钮">
+    <input type="reset" value="重置按钮">
+</form>
+label标签的唯一作用是触发input，它的for指向input的id
+<input type="radio" name="gender" id="male">
+<label for='male'>男</label>
+
+
+标签的属性
+属性值不写单位
+在开标签中，与标签名之间至少一个空格
+src:source制定要链接的图片的路径
+width：宽
+height：高
+href：hyper reference ：制定锚点要跳转的URL
+target="_blank",在新窗口中打开链接
+id：html为css和js提供的借口
+class：html为css和js提供的借口
+title：元素的提示属性
+style：样式属性，值为css样式。
+on+EventName：事件属性
+
+块级标签：不论内容多少，占一行。
+h1~6
+div
+
+行内标签：在一行中显示。
+span,
+a
+img
+
+html5标签  5.1
+新增了标签、属性、元素。语义化标签。
+<!doctype html>文档类型声明，不是标签。
+meta：元标签。对seo，自适应，文件信息有用。
+以名值对的形式设置属性，name=“viewport”，content=“width=device-width”
+viewport：视图池，width=device-width：宽度等于设备的宽度。
+设置自适应
+<meta name="viewport" content="width=device-width">
+设置作者
+<meta name="author" content="mary">
+设置关键字
+<meta name="keywords" content="web design,js">
+设置描述
+<meta name="description" content="the biggest">
+结构化标签
+main：最主要标签，页面的所有内容放在main中。
+section：区块，一个内容相对独立的标签。
+header：头部标签
+footer：尾部标签
+aside：侧边栏
+article：文章
+nav：导航标签
+
+其它标签
+progess：进度条，value需要配合min和max使用。
+audio：音频，很少专门使用。
+video：视频，没有一种视频格式是被所有的浏览器支持。
+video的属性
+src：指定要播放的视频。
+autoplay：自动播放
+poster：视频封面
+<video>
+        <source src="deng.mp4" type="">
+        <source src="deng.wav" type="">
+        <source src="deng.ogg" type="">
+</video>
+script：引入外部的js文件
+<script src="demo.js"></script>
+link：引入外部的css文件
+<link href="demo.css" rel="stylesheet"/>
+
+html的单位
+颜色：
+单词，如red，green，
+十六进制：#0023ff
+尺寸
+默认是像素
+还可以是百分比
+
+废弃标签
+没有语义化的标签
+关于样式的标签
+b：被strong取代
+u：下划线，被css样式取代
+font：字体标签，也被css样式取代。
+marquee：可以让内容动起来。
+direction:left,right,down,top运动的方向
+behavior：运动的方式，slide运动一次就停止，scroll循环运动，alternate折返运动
+注释
+<!--注释内容->：很重要。
+<!--[if IE 6]> 仅IE6可识别 <![endif]-->：基本不再使用
+
+
+作业：
+手写一个页面，尽量多的用标签。（文本文件）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
