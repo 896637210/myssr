@@ -1,0 +1,35 @@
+
+G:\Android\AndroidStudio
+G:\Android\sdk
+
+
+keytool -genkey -v -keystore my-release-key.keystore -alias ssh -keyalg RSA -keysize 2048 -validity 10000
+
+
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore android-release-unsigned.apk ssh
+
+
+
+
+
+
+
+
+
+
+
+
+%ANT_HOME%\bin;%JAVA_HOME%\bin;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\nodejs\;C:\Program Files\Git\cmd
+
+
+%JAVA_HOME%\bin;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\nodejs\;C:\Program Files\Git\cmd
+
+
+
+
+
+
+
+
+C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\nodejs\;C:\Program Files\Git\cmd
