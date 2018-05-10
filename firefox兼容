@@ -1,0 +1,14 @@
+click
+    function clickObj(obj) {
+        if (document.all) {
+            obj.click();
+        }
+        else {
+            var evt = document.createEvent("MouseEvents");
+            evt.initEvent("click", true, true);
+            obj.dispatchEvent(evt);
+        }
+    }
+    //调用
+    var btnObj = document.getElementById("btn");
+    clickObj(a);
