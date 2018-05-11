@@ -1,0 +1,15 @@
+//preview img ： URL.createObjectURL 方式
+    document.getElementById('imgFile').onchange = function(e){
+        var ele =  document.getElementById('imgFile').files[0];
+
+        var createObjectURL = function(blob){
+          return window[window.webkitURL ? 'webkitURL' : 'URL']['createObjectURL'](blob);
+        };
+        var newimgdata = createObjectURL(ele);
+
+        var pvImg = new Image();
+        pvImg.src = newimgdata;
+        pvImg.setAttribute('id','previewImg');
+
+        $('.preview_wrap').html('').append(pvImg);
+    }
