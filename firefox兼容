@@ -10,5 +10,5 @@ click
         }
     }
     //调用
-    var btnObj = document.getElementById("btn");
+    var a= document.getElementById("btn");
     clickObj(a);
