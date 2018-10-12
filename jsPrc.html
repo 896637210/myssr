@@ -1,0 +1,120 @@
+<script>
+    function helloWorld(ready) {
+        return new Promise(function (resolve, reject) {
+            if (ready) {
+                resolve("Hello World!");
+            } else {
+                reject("Good bye!");
+            }
+        });
+    }
+
+    helloWorld(false).then(function (message) {
+        alert(message);
+    }, function (error) {
+        alert(error);
+    });
+    helloWorld(false).then(function (result) {
+        console.log('成功：' + result);
+    }).catch(function (reason) {
+        console.log('失败：' + reason);
+    });
+
+    var p1 = new Promise(function (resolve, reject) {
+        setTimeout(resolve, 500, 'P1');
+    });
+    var p2 = new Promise(function (resolve, reject) {
+        setTimeout(resolve, 600, 'P2');
+    });
+    //由于p1执行较快，Promise的then()将获得结果'P1'。p2仍在继续执行，但执行结果将被丢弃。
+    Promise.race([p1, p2]).then(function (result) {
+        console.log(result); // 'P1'
+    });
+    // 同时执行p1和p2，并在它们都完成后执行then:
+    Promise.all([p1, p2]).then(function (results) {
+        console.log(results); // 获得一个Array: ['P1', 'P2']
+    });
+    var createObjectURL = function (blob) {
+        return window[window.webkitURL ? 'webkitURL' : 'URL']['createObjectURL'](blob);
+    };
+
+
+    //暂放  折线
+        var data=[];
+        var keys = [];
+        var flask_d3_data2={{ tires_age|safe }};
+        for (var s in flask_d3_data2){
+            data.push({'name':s*1+1,'value': flask_d3_data2[s]});
+            keys.push(s*1+1);
+         }
+         console.log(flask_d3_data2);
+    var svg=d3.select("#default_chart1 svg"),
+        margin = {
+                top: 30,
+                right: 10,
+                bottom: 30,
+                left: 30
+            },
+        width = +svg.attr("width") - margin.left - margin.right,
+        height = +svg.attr("height") - margin.top - margin.bottom;
+    var x=d3.scaleBand()
+            .domain(data.map(function(d) { return d.name; }))
+            .range([height,0]);
+    var y = d3.scaleLinear()
+        .domain([d3.min(data, function(d) { return d.value; })-10, d3.max(data, function(d) { return d.value; })+50])
+        .range([0,width]);
+    var xAxis = d3.axisLeft()
+            .scale(x);
+    var yAxis = d3.axisBottom()
+            .scale(y);
+    var lineGen = d3.line()
+        .y(function(d) {
+        return x(d.name)+x.bandwidth()/2;
+    })
+        .x(function(d) {
+        return y(d.value);
+    });
+    var grid = svg.selectAll(".grid")
+        .data(data)
+        .enter().append("g")
+        .attr("class", "grid")
+        .append("line")
+        .attr("y1", function(d){ return x(d.name)+x.bandwidth()+7})
+        .attr("y2", function(d){ return x(d.name)+x.bandwidth()+7})
+        .attr("x1", y(0)+margin.left)
+        .attr("x2", width+margin.left)
+        .attr('stroke-width','1')
+        .attr('stroke','rgba(51,70,107,1)');
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    g.append('g')
+        .attr('class', 'axis')
+        .attr("transform", "translate("+y(0)+",0)")
+        .call(xAxis);
+    g.append('g')
+        .attr('class', 'axis')
+        .attr("transform", "translate(0," + height + ")")
+        .call(yAxis);
+
+    g.append('svg:path')
+      .attr('d', lineGen(data))
+      .attr('stroke', 'rgba(43,204,154,1)')
+      .attr('stroke-width', 2)
+      .attr('fill', 'none');
+
+    g.append('g')
+        .selectAll('.bar')
+        .data(data)
+        .enter()
+        .append('rect')
+    .attr('x', function(d) {
+        return y(d.value)-7;
+    })
+    .attr('y', function(d) {
+        return x(d.name)+(x.bandwidth()/2)-7;
+    })
+    .attr('width', 14)
+    .attr('height', 14)
+    .attr('fill', function() {
+        return '#2BCC9A';
+    });
+</script>
